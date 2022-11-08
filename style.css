@@ -8,7 +8,7 @@
     background-color: #24252A;
 }
 
-/* NAVIGATION BAR */
+/* NAVIGATION BAR START */
 /* ======================================================= */
 
 h1,li,a,h3{
@@ -105,6 +105,7 @@ nav{
 }
 
 .sub-menu-wrap{
+    background-color: transparent;
     position: absolute;
     top:100%;
     right: 10%;
@@ -190,5 +191,132 @@ nav{
 
 }
 
-
+/* NAVIGATION BAR END */
 /* ======================================================== */
+
+
+
+
+
+
+/* IMAGE-SLIDER START */
+/* ======================================================== */
+
+
+.Image-slider{
+    background-color: rgb(20, 19, 19);
+}
+
+.slider{
+    margin-left: 25%;
+    width: 1024px;
+    height: 750px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 1024px;
+    height: 750px;
+}
+
+
+.navigation-manual{
+    margin-top: 220px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.manual-btn{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+
+.manual-btn:hover{
+    background:#40D3DC ;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+
+.navigation-auto{
+    pointer-events: none;
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin: 720px 112px
+}
+
+
+.navigation-auto div{
+    border: 2px solid #40d3dc;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #40D3DC;
+}
+
+/* IMAGE-SLIDER END */
+/* /* ======================================================== */ */
