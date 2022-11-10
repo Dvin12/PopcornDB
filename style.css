@@ -425,3 +425,13 @@ nav{
     display: inline-block;
     cursor: pointer;
 }
+
+.tag.highlight{
+    background-color: yellowgreen
+}
+
+.no-results{
+    color: white;
+    font-size: 30px;
+    margin-top: 180px;
+}

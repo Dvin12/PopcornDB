@@ -135,9 +135,46 @@ function setGenre() {
             }
             console.log(selectedGenre)
             getMovies(API_URL + '&with_genres='+encodeURI(selectedGenre.join(',')))
+            highlightSelection()
         })
         tagsEl.append(t);
     })
+}
+
+
+function highlightSelection() {
+    const tags = document.querySelectorAll('.tag')
+    tags.forEach(tag => {
+        tag.classList.remove('highlight')
+    })
+    clearBtn()
+    if(selectedGenre.length !=0)
+    selectedGenre.forEach(id => {
+        const highlightTag = document.getElementById(id)
+        highlightTag.classList.add('highlight')
+    })
+}
+
+
+
+function clearBtn(){
+    let clearBtn = document.getElementById('clear')
+    if(clearBtn){   
+        clearBtn.classList.add('highlight')
+    }else{
+         let clear = document.createElement('div')
+    clear.classList.add('tag','highlight')
+    clear.id = 'clear'
+    clear.innerText = 'Clear x'
+    clear.addEventListener('click', () => {
+        selectedGenre = []
+        setGenre()
+        getMovies(API_URL)
+    })
+    tagsEl.append(clear)
+    }
+
+   
 }
 
 
@@ -151,7 +188,12 @@ function getMovies(url) {
 
     fetch(url).then(res => res.json()).then(data => {
         console.log(data.results)
+        if(data.results.length !==0){
         showMovies(data.results);
+        }else{
+            main.innerHTML = `<h5 class='no-results'>No Results Found</h5>`
+        }
+
     })
 
 }
@@ -165,7 +207,7 @@ function showMovies(data) {
         const movieEl = document.createElement('div')
         movieEl.classList.add('movie');
         movieEl.innerHTML = `
-        <img src="${IMG_URL+poster_path}" alt="${title}">
+        <img src="${poster_path? IMG_URL+poster_path:'https://via.placeholder.com/1080'}" alt="${title}">
 
         <div class="movie-info">
           <h4>${title}</h4>
@@ -203,7 +245,8 @@ form.addEventListener('submit', (e) => {
 
 
     const searchTerm = search.value;
-
+    selectedGenre=[]
+    setGenre()
     if(searchTerm) {
         getMovies(searchURL+'&query='+searchTerm)
     }else{
