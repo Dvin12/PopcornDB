@@ -341,7 +341,6 @@ nav{
     margin: 1rem;
     border-radius: 3px;
     box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
-    background-color: #ff2600;
     position: relative;
     overflow: hidden;
 }
@@ -405,4 +404,24 @@ nav{
 
 .movie:hover .overview{
     transform:translateY(0);
+}
+
+
+#tag{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.tag{
+    color: white;
+    padding: 10px 20px;
+    background-color: red;
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
 }
