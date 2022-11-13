@@ -14,7 +14,7 @@ setInterval(function(){
 }, 5000)
 
 
-// TMDB
+// TMDB //
 
 const API_KEY = 'api_key=900e7738800eb2e39b3194781683cc3c'
 const BASE_URL = 'https://api.themoviedb.org/3'

@@ -419,7 +419,7 @@ nav{
 .tag{
     color: white;
     padding: 10px 20px;
-    background-color: red;
+    background-color: rgba(0, 255, 136, 0.527);
     border-radius: 50px;
     margin: 5px;
     display: inline-block;
@@ -427,7 +427,7 @@ nav{
 }
 
 .tag.highlight{
-    background-color: yellowgreen
+    background-color: rgb(235, 27, 27)
 }
 
 .no-results{
