@@ -435,3 +435,153 @@ nav{
     font-size: 30px;
     margin-top: 180px;
 }
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+
+    h1,li,a, h3{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: #edf0f1;
+        text-decoration: none;
+        background-color: rgb(39, 34, 37);
+    }
+    
+    header{
+        padding: 10px 0px;
+    }
+    
+    header .search-box{
+        width: 60%;
+        left: 5px;
+        position: absolute;
+    }
+    
+    .search-box input{
+        border-radius: 21px;
+        color: gray;
+        font-size: 18px;
+        text-align: center;
+        
+    }
+    
+    .search-box button{
+        width: 30px;
+        height: 30px;
+        top: 5px;
+        right: 0;
+    }
+    
+    
+    
+    
+    .header1{
+        cursor: pointer;
+        visibility: hidden;
+    }
+    
+    .user-pic{
+        width: 30px;
+        border-radius: 50%;
+        margin-left: -50px;
+    }
+    
+    
+    
+    
+    .nav_links{
+        list-style: none;
+        background-color: rgb(39, 34, 37);
+    
+    }
+    
+    .nav_links li{
+        display: inline-block;
+        padding: 0 20px;
+        
+    }
+    
+    .nav_links li a{
+        transition: all 0.3s ease 0s;
+    }
+    
+    .nav_links li a:hover{
+        color: crimson;
+    }
+    
+    
+    .sub-menu-wrap.open-menu{
+        max-height: 400px;
+    }
+    
+    .sub-menu-wrap{
+        right: -30px;
+    }
+    
+    .sub-menu{
+        padding: 9px;
+        margin: 9px 30px;
+    }
+    
+    
+    /* NAVIGATION BAR END */
+    /* ======================================================== */
+    
+    
+    
+    
+    
+    
+    /* IMAGE-SLIDER START */
+    /* ======================================================== */
+    
+    
+    .Image-slider{
+        background-color: rgb(20, 19, 19);
+    }
+    
+    .slider{
+        margin-left: 55px;
+        margin-top: 24px;
+        width: 314px;
+        height: 352px;
+    }
+    
+    .slides{
+        width: 1605px;
+        height: 202px;
+    }
+    
+    
+    .slide img{
+        width: 320px;
+        height: 340px;
+    }
+    
+    
+    .navigation-manual{
+        margin-top: 116px;
+        margin-left: -3px;
+    
+    }
+    
+   
+    
+    
+    
+    
+    
+    
+    .navigation-auto{
+        margin: 318px -245px
+    }
+    
+
+
+}
